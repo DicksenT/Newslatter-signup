@@ -19,6 +19,7 @@ body{
     background-color: white;
     padding: 20px;
     border-radius: 32px;
+    display: flex;
 }
 /*Text Left Area*/
 .left{
@@ -76,19 +77,110 @@ li{
     transition: 0.4s;
     
 }
-.submit:hover{
-    background-color: hsl(4, 100%, 67%);
+.submit:hover,
+.dismiss:hover{
+    background-color: hsl(4, 90%, 67%);
     box-shadow: 0px 10px 32px -3px hsl(4, 100%, 67%);
 }
-.success{
-    display: none;
+.name-error{
+    display: flex;
+    justify-content: space-between;
 }
+
 /*Right Part*/
 .right{
     width: 50%;
-    padding: 12px;
+
 }
 .photo{
     width: 100%;
     content: url(assets/images/illustration-sign-up-desktop.svg);
+}
+/* Success */
+.success{
+    width: 420px;
+    display: none;
+    padding: 36px 48px;
+    color: hsl(234, 29%, 20%);
+}
+.icon{
+    width: 48px;
+    margin-bottom: 20px;
+}
+.icon img{
+    width: 100%;
+}
+.confirm-email{
+    font-weight: 700;
+}
+.dismiss{
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    text-align: center;
+    padding: 14px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    transition: 0.4s;
+}
+
+/* Media Responsive */
+@media(max-width: 375px){
+.container{
+    width: 375px;
+    flex-direction: column-reverse;
+    height: 132vh;
+    padding: 0px;
+    border-radius: 0;
+}
+.left{
+    padding: 20px;
+    width: 342px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.right{
+    width: 100%;
+}
+.photo{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    content: url(assets/images/illustration-sign-up-mobile.svg);
+}
+.bold{
+    font-size: 28px;
+    text-align: start;
+}
+.text{
+    margin: 0;
+}
+.lists{
+    margin: 20px 0;
+}
+.label,
+.errorMsg{
+    font-size: 12px;
+}
+.attribution{
+    display: none;
+}
+.success{
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+    position: relative;
+}
+.dismiss{
+    position: absolute;
+    bottom: 0;
+    width: 343px;
+}
+.icon{
+    margin-top: 15vh;
+}
+.success-text{
+    margin-top: 5vh;
+}
 }

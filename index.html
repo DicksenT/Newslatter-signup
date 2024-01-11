@@ -43,7 +43,10 @@
           <li class="list">And much more!</li>
         </ul>
         <form action="" class="email-form">
-          <label for="email" class="label">Email address</label>
+          <div class="name-error">
+            <label for="email" class="label">Email address</label>
+            <div class="errorMsg"></div>
+          </div>
           <input type="text" class="email" placeholder="email@company.com" />
           <button class="submit">Subscribe to monthly newsletter</button>
         </form>
@@ -56,9 +59,16 @@
 
     <!-- Success message start -->
     <div class="success container">
-      Thanks for subscribing! A confirmation email has been sent to
-      ash@loremcompany.com. Please open it and click the button inside to
-      confirm your subscription. Dismiss message
+      <div class="icon">
+        <img src="assets/images/icon-success.svg" alt="" />
+      </div>
+      <div class="bold">Thanks for subscribing!</div>
+      <div class="text success-text">
+        A confirmation email has been sent to
+        <span class="confirm-email"></span>. Please open it and click the button
+        inside to confirm your subscription.
+      </div>
+      <div class="dismiss">Dismiss message</div>
     </div>
 
     <!-- Success message end -->
